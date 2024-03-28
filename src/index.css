@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shrikhand&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, h1, h2, h3, h4, h5, h6 {
+    font-family: 'millik', 'regular';
+}
+
+h1 {
+    color: #335F32;
+}
+
+
+
+
+
+p, a, button, span {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.hero-bg {
+    background-image: url('/src/assets/hero-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.quotes {
+    position: relative;
+    padding: 0 40px;
+}
+
+.quotes::before {
+    content: "\201C";
+    position: absolute;
+    font-weight: bold;
+    font-size: 4em;
+    color: #335F32;
+    top: 10px;
+    left: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.quotes::after {
+    content: "\201D";
+    position: absolute;
+    font-weight: bold;
+    font-size: 4em;
+    color: #335F32;
+    bottom: -10px;
+    right: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.sidebar-container {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    opacity: 1;
+    transition: 0.3s ease-in-out all;
+  }
+  .show-sidebar {
+    z-index: 99;
+    opacity: 1;
+  }
+
+@media screen and (max-width: 600px) {
+    .hero-bg {
+        height: 60vh;
+        background-image: url('/src/assets/hero-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    .quotes::before {
+        content: "\201C";
+        position: absolute;
+        font-weight: bold;
+        font-size: 4em;
+        color: #335F32;
+        top: 10px;
+        left: 0px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .quotes::after {
+        content: "\201D";
+        position: absolute;
+        font-weight: bold;
+        font-size: 4em;
+        color: #335F32;
+        bottom: -10px;
+        right: 150px;
+    }
+}
+
+thead {
+    background: #000;
+}
+
+@layer utilities {
+    .link {
+        @apply no-underline text-[#000] 
+    }
+
+    /* .links:hover {
+        @apply text-[#335F32] duration-300 transition-all
+    }
+
+    .nav-link {
+        @apply relative no-underline text-black duration-300
+    }
+
+    .nav-link::after {
+        @apply content-[''] bg-[#5a8b26] h-[2px] w-[0%] rounded-xl absolute left-0 -bottom-[3px] duration-300
+    }
+
+    .nav-link:hover::after{
+        @apply w-[100%]
+    }
+
+    .links-active {
+        @apply border-b-2 border-[#335F32] text-[#335F32] duration-300
+    } */
+}
