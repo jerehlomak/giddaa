@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosArrowDropup } from 'react-icons/io'
-import { government, remote } from '../assets'
+import { government, Layer2, remote } from '../assets'
 import { FaLinkedinIn, FaTwitter, FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 
 const Government = () => {
@@ -9,7 +9,7 @@ const Government = () => {
       <div className="container mx-auto flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/2 space-y-4">
           <div className='bg-white h-24 w-24 flex rounded-full items-center justify-center'>
-            <img src={remote} alt="remote" className='h-[60%] w-[60%]' />
+            <img src={Layer2} alt="remote" className='h-[60%] w-[60%]' />
           </div>
           <h1 className='text-[#335F32] text-[2rem] md:text-[2.2rem] lg:text-[2.8rem] font-[900] tracking-wider'>Public Sector Workers</h1>
           <p>

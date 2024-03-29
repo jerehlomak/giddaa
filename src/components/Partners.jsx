@@ -3,6 +3,7 @@ import PartnerCard from './PartnerCard'
 
 import { ourPartners } from '../utils/constants'
 import Slides from './Slides'
+import { handshake } from '../assets'
 import SlideContainer from './SlideContainer'
 
 const Partners = () => {
@@ -32,6 +33,10 @@ const Partners = () => {
           <div className=''>
               <Slides />
           </div>
+        </div>
+        <div className="absolute left-[50%] -translate-x-[50%] flex px-4 py-2 rounded-full items-center -skew-y-[6deg] shadow-shadow justify-center gap-2 border-[1px] border-[#335F32]">
+          <img src={handshake} alt="" />
+          <span className='capitalize text-xs font-bold text-[#335F32]'>If they trust us, so can you</span>
         </div>
       </div>
       <div className='bg-[#F3FAF2] py-16 '>

@@ -14,12 +14,13 @@ module.exports = {
         '2xl': '6rem',
       },
     },
-    extend: {
+    extend: { 
       colors: {
         'black-rgba': 'rgba(0, 0, 0, 0.54)',
       },
       boxShadow: {
-        'box-shadow': 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;'
+        'box-shadow': 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;',
+        'shadow': 'rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px'
       }
     },
   },

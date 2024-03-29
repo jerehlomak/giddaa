@@ -15,7 +15,7 @@ const PurchaseOptions = () => {
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           {options.map((option) => (
-            <PurchaseOption title={option.title} features={option.features} description={option.description} subTitle={option.subTitle}/>
+            <PurchaseOption img={option.img} title={option.title} features={option.features} description={option.description} subTitle={option.subTitle}/>
           ))}
         </div>
       </div>

@@ -1,8 +1,31 @@
 import React from "react";
 import Slider from "react-slick";
 import PartnerCard from "./PartnerCard";
+import { TiMediaPlayReverse, TiMediaPlay } from "react-icons/ti";
 
 import { ourPartners } from "../utils/constants";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className="absolute z-10 -bottom-12 right-16">
+      <button onClick={onClick} className="h-8 w-8 rounded-full bg-[#335F32] flex items-center justify-center">
+        <TiMediaPlay size={20} color="white" />
+      </button>
+    </div> 
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className="absolute z-10 -bottom-12 right-28">
+      <button onClick={onClick} className="h-8 w-8 rounded-full bg-[#335F32] flex items-center justify-center">
+      <TiMediaPlayReverse size={20} color="white" />
+      </button>
+    </div> 
+  );
+}
 
 const SlideContainer = () => {
   const settings = {
@@ -10,8 +33,10 @@ const SlideContainer = () => {
     infinite: true,
     slidesToShow: 3.3,
     slidesToScroll: 1,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
     autoplay: false, 
-    speed: 4000,
+    speed: 1000,
     autoplaySpeed: 1000,
     cssEase: "linear",
     responsive: [
@@ -27,7 +52,7 @@ const SlideContainer = () => {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1.2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 2 
           }
@@ -42,14 +67,22 @@ const SlideContainer = () => {
       ]
   };
   return (
-    <div className="slider-container">
-      <Slider {...settings}>       
+    <div className="slider-container relative flex flex-col">
+      <Slider {...settings} className="relative">       
         {ourPartners.map((partner, idx) => ( 
             <div>
                 <PartnerCard key={idx} img={partner.img} name={partner.name} position={partner.position} />
             </div>
           ))} 
       </Slider>
+      {/* <div className="w-full pt-4 pr-4 md:pr-16 flex items-center justify-end gap-3">
+        <button className="h-8 w-8 rounded-full bg-[#335F32] flex items-center justify-center">
+          <TiMediaPlayReverse size={20} color="white" />
+        </button>
+        <button className="h-8 w-8 rounded-full bg-[#335F32] flex items-center justify-center">
+          <TiMediaPlay size={20} color="white" />
+        </button>
+      </div> */}
     </div>
   );
 };

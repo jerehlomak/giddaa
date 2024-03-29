@@ -28,6 +28,10 @@ import family_3 from './images/family3.webp'
 import logo from './images/logo.png'
 import diaspora from './images/diaspora.png'
 import remote1 from './images/remote1.png'
+import mortgage from './images/svgs/mortgage.svg'
+import outright from './images/svgs/outright.svg'
+import payment from './images/svgs/payment.svg'
+import Layer2 from './images/svgs/Layer2.svg'
 
 export {
     hero_bg,
@@ -59,5 +63,10 @@ export {
     family_3,
     logo,
     remote1,
-    diaspora
+    diaspora,
+    mortgage,
+    outright,
+    payment,
+    Layer2,
+
 }

@@ -17,7 +17,7 @@ const Navbar = () => {
     setShowNav(false)
   }
   const [showNav, setShowNav] = useState(false)
-  const navStyle = 'no-underline text-[#8c8c8c] hover:text-[#335F32] hover:font-semibold transition-all duration-300'
+  const navStyle = 'no-underline text-[#8c8c8c] hover:text-[#335F32] font-semibold transition-all duration-300'
   return (
     <div className='bg-[#F2F2F2] '>
       <div className='container h-[14vh] flex justify-between items-center'>
@@ -33,16 +33,16 @@ const Navbar = () => {
           <NavLink className={navStyle} to="/">Home</NavLink>
           </li>
           <li>
-          <NavLink className={navStyle}  to="/service">Properties</NavLink>
+          <NavLink className={navStyle}  to="/">Properties</NavLink>
           </li>
           <li>
-          <NavLink className={navStyle}  to="/about">Developers</NavLink>
+          <NavLink className={navStyle}  to="/">Developers</NavLink>
           </li>
           <li>
-          <NavLink className={navStyle}  to="/about">Mortgage Banks</NavLink>
+          <NavLink className={navStyle}  to="/">Mortgage Banks</NavLink>
           </li>
           <li>
-          <NavLink className={navStyle}  to="/about">Consult an Expert</NavLink>
+          <NavLink className={navStyle}  to="/">Consult an Expert</NavLink>
           </li>
         </ul>
         <div className='relative hidden bg-[#335F32] md:flex items-center justify-center h-10 w-10 rounded-full'>

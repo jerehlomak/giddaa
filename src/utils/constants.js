@@ -8,7 +8,8 @@ import {
   computer,
   home,
   pointer,
-  partner1, partner2, partner3, partner4
+  partner1, partner2, partner3, partner4,
+  mortgage, payment, outright
 } from '../assets/'
 
 export const formatPrice = (price) => {
@@ -21,6 +22,7 @@ export const formatPrice = (price) => {
 
 export const options = [
     {
+      img: mortgage,
       title: 'Mortgages',
       subTitle: 'the slow turtle',
       description: 'Imagine you want to buy a house, but you don’t have all the money upfront. A mortgage is like a loan from a bank or a lender that helps you buy the house now, and you pay back the loan over time, usually with interest. It’s a way to spread out',
@@ -33,6 +35,7 @@ export const options = [
       ]
     },
     {
+      img: payment,
       title: 'Payment plans',
       subTitle: 'the gallowing horse',
       description: 'Imagine you’re looking to buy your dream house, but you don’t have all the money saved up. A payment plan is a structured arrangement where you agree to pay for your home over a period of time instead of all at once. It allows you to split the cost into smaller, manageable payments spread out over months, or years until the full amount is paid off. This makes the purchase of your dream home more affordable and accessible by breaking down the total cost into more managable payments, usually monthly.',
@@ -45,6 +48,7 @@ export const options = [
       ]
     },
     {
+      img: outright,
       title: 'ouright purchase',
       subTitle: 'the swift rabbit',
       description: 'The outright purchase of a house refers to buying a home directly without the need for financing through a mortgage or creation of flexible payment plans by developers. In this scenario, you pay the entire purchase price upfront using your own funds or savings, without relying on a loan from a bank or flexible payment options from developers. This means that once the transaction is complete, the you own the property outright, without any debt or ongoing payments to a lender or property developer.',

@@ -5,15 +5,22 @@ import { MdPlayArrow } from "react-icons/md";
 import { IoIosPlayCircle } from "react-icons/io";
 
 
-const PurchaseOption = ({ title, subTitle, description, features }) => {
+const PurchaseOption = ({ img, title, subTitle, description, features }) => {
   return (
-    <div className='bg-[#f3f3f3] flex flex-col p-4 rounded-lg gap-4 text-[13px]'>
-        <h1 className='capitalize text-center text-[1.35rem] text-[#335F32] font-semibold'>{title}</h1>
-        <h5 className='text-center uppercase text-[.8rem]'>{subTitle}</h5>
+    <div className='bg-[#f3f3f3] flex flex-col p-4 rounded-lg gap-2 text-[13px]'>
+        <div className='flex items-center justify-between'>
+          <img src={img} alt="" />
+          <span className=''>
+            <h1 className='capitalize text-center text-[1.35rem] text-[#335F32] font-semibold'>{title}</h1>
+            <h5 className='text-center uppercase text-[.8rem]'>{subTitle}</h5>
+          </span>
+          <div>  
+          </div>
+        </div>
         <p>{description}</p>
         <span className='flex py-2 items-center gap-4'>
             <GrStatusGood size={20}/>
-            <p>View Another Explanation</p>
+            <span>View Another Explanation</span>
             <FaLightbulb color='yellow' size={20} />
         </span>
         <div>
