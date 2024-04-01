@@ -25,6 +25,8 @@ import vimeo from './images/svgs/vimeo.svg'
 import chrome from './images/svgs/chrome.svg'
 import dropbox from './images/svgs/dropbox.svg'
 import family_3 from './images/family3.webp'
+import family_1 from './images/family1.webp'
+import family_4 from './images/family4.webp'
 import logo from './images/logo.png'
 import diaspora from './images/diaspora.png'
 import remote1 from './images/remote1.png'
@@ -68,5 +70,6 @@ export {
     outright,
     payment,
     Layer2,
-
+    family_1,
+    family_4
 }

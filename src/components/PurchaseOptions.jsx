@@ -14,8 +14,8 @@ const PurchaseOptions = () => {
           Buying a home isn’t a one-size fits all kind of purchase — we know!. So…we give you all the options the market has to offer to choose from!
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-          {options.map((option) => (
-            <PurchaseOption img={option.img} title={option.title} features={option.features} description={option.description} subTitle={option.subTitle}/>
+          {options.map((option, idx) => (
+            <PurchaseOption key={idx} img={option.img} title={option.title} features={option.features} description={option.description} subTitle={option.subTitle}/>
           ))}
         </div>
       </div>

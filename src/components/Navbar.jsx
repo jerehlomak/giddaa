@@ -44,6 +44,15 @@ const Navbar = () => {
           <li>
           <NavLink className={navStyle}  to="/">Consult an Expert</NavLink>
           </li>
+          {user ? (
+            <li>
+            <NavLink className={navStyle}  to="/developer/transaction/get-summary">Dashboard</NavLink>
+            </li>
+          ) : (
+            <li>
+          <NavLink className={navStyle}  to="/account/login">Login</NavLink>
+          </li>
+          )}
         </ul>
         <div className='relative hidden bg-[#335F32] md:flex items-center justify-center h-10 w-10 rounded-full'>
           <FaRegBell color='white' className='' size={24} />

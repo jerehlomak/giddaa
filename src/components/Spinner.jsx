@@ -3,7 +3,7 @@ import { ThreeCircles, ThreeDots } from 'react-loader-spinner'
 
 const Spinner = () => {
   return (
-    <div className='flex justify-center w-full items-center '>
+    <div className='flex justify-center h-[100%] w-full items-center '>
         <ThreeCircles
             visible={true}
             height="80"

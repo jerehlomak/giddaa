@@ -35,7 +35,7 @@ const DashboardPage = () => {
             to="/developer/transaction/get-summary"
             className={({ isActive}) =>
               [
-                isActive ? "links links-activ" : "links",
+                isActive ? "links links-active" : "links",
               ].join("")
             }
           >

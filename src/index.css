@@ -109,7 +109,7 @@ thead {
 }
 
 @layer utilities {
-    .link {
+    .links {
         @apply no-underline text-[#000] 
     }
 

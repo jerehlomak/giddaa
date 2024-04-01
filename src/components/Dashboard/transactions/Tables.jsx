@@ -8,7 +8,6 @@ import { formatPrice } from "../../../utils/constants";
 import PaginatedItems from "./PaginatedItems";
 
 const Tables = ({ payments }) => {
-  const formatedDate = moment(payments.dateOfPayment).format("MMM Do YYYY");
   const [hover, setHover] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -44,24 +43,17 @@ const Tables = ({ payments }) => {
               <td>{payment.transactionType}</td>
               <td>{payment.house.type}</td>
               <td>{payment.mortgagePlan.name}</td>
-              <td>{formatedDate}</td>
-              <td className="">
-                <span className="cursor-pointer">
-                  <HiOutlineDotsVertical
-                    color="gray"
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
+              <td>{moment(payment.dateOfPayment).format("MMM Do YYYY")}</td>
+              <td className="relative">
+                <span className="cursor-pointer block">
+                  <HiOutlineDotsVertical color="gray" 
                   />
                 </span>
-                {/* {hover && (
-                  <span className='absolute text-[0.5rem] flex flex-col right-5 uppercase top-5 bg-white shadow-sm border-[1px] border-[#f0f0f0] '>
-                    <p>view receipt</p>
-                    <p>download receipt</p>
-                  </span>
-                )} */}
+              
               </td>
             </tr>
           ))}
+         
         </tbody>
       </Table>
       <PaginatedItems

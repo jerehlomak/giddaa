@@ -36,9 +36,10 @@ const SlideContainer = () => {
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
     autoplay: false, 
-    speed: 1000,
+    speed: 500,
     autoplaySpeed: 1000,
     cssEase: "linear",
+    className: "center",
     responsive: [
         {
           breakpoint: 1024,
@@ -54,35 +55,29 @@ const SlideContainer = () => {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 2 
+            initialSlide: 2,
+            className: "center",
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            className: "center",
           }
         }
       ]
   };
   return (
-    <div className="slider-container relative flex flex-col">
+    <div className="slider-container w-full relative pl-16 md:pl-0 flex flex-col justify-center">
       <Slider {...settings} className="relative">       
         {ourPartners.map((partner, idx) => ( 
-            <div>
+            <div key={idx}>
                 <PartnerCard key={idx} img={partner.img} name={partner.name} position={partner.position} />
             </div>
           ))} 
       </Slider>
-      {/* <div className="w-full pt-4 pr-4 md:pr-16 flex items-center justify-end gap-3">
-        <button className="h-8 w-8 rounded-full bg-[#335F32] flex items-center justify-center">
-          <TiMediaPlayReverse size={20} color="white" />
-        </button>
-        <button className="h-8 w-8 rounded-full bg-[#335F32] flex items-center justify-center">
-          <TiMediaPlay size={20} color="white" />
-        </button>
-      </div> */}
     </div>
   );
 };

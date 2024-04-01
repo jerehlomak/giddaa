@@ -26,9 +26,9 @@ const PurchaseOption = ({ img, title, subTitle, description, features }) => {
         <div>
             <h3 className='text-center text-[1.1rem] text-[#335F32] font-semibold'>Features of {title}</h3>
             {features.map((feature, idx) => (
-                <div className='flex gap-2 items-start justify-start py-1'>
+                <div key={idx} className='flex gap-2 items-start justify-start py-1'>
                     <MdPlayArrow size={20} />
-                    <span key={idx}>{feature}</span>
+                    <span>{feature}</span>
                 </div>
             ))}
         </div>

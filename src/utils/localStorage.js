@@ -10,6 +10,5 @@ export const addUserToLocalStorage = (user) => {
     const result = localStorage.getItem('user');
     
     const user = result ? JSON.parse(result) : null;
-    console.log(user);
     return user;
   };

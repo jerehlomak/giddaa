@@ -39,7 +39,7 @@ const Partners = () => {
           <span className='capitalize text-xs font-bold text-[#335F32]'>If they trust us, so can you</span>
         </div>
       </div>
-      <div className='bg-[#F3FAF2] py-16 '>
+      <div className='bg-[#F3FAF2] mx-auto py-16 '>
         <div className='ml-4 md:ml-12 lg:ml-28'>
           <SlideContainer />
           {/* {ourPartners.map((partner, idx) => (

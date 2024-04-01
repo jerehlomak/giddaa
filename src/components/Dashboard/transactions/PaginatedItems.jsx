@@ -23,23 +23,23 @@ const PaginatedItems = ({ recordsPerPage, items, currentPage, setCurrentPage }) 
     return (
       <>
         <nav>
-            <ul className="pagination">
-                <li className="page-item">
+            <ul className="flex items-center divide-x-[1px]">
+                <li className="bg-[#335F32] text-white p-2 text-[1rem] rounded-l-md">
                     <a href="#" className="page-link"
                         onClick={prevPage}
                     >Prev</a>
                 </li>
                 {
                     numbers.map((n, i) => (
-                        <li className={`page-item ${currentPage === n ? 'active' : ''}`} key={i}>
+                        <li onClick={() => changePage(n)} className={`bg-[#335F32] p-2 text-[1rem] ${currentPage === n ? 'text-[#335F32] bg-white' : 'text-white'}`} key={i}>
                             <a href="#" className="page-link"
-                            onClick={() => changePage(n)}>
+                          >
                                 {n}
                             </a>
                         </li>
                     ))
                 }
-                <li className="page-item">
+                <li className="bg-[#335F32] text-white p-2 text-[1rem] rounded-r-md">
                     <a href="#" className="page-link"
                         onClick={nextPage}
                     >Next</a>
